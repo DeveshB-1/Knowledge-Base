@@ -1,0 +1,59 @@
+#+TITLE: Kubernetes Concepts
+#+ROAM_KEY: kubernetes-concepts
+#+ROAM_TAGS: kubernetes devops orchestration
+#+DATE: 2025-10-19
+#+ID: 20251019-kubernetes-concepts
+
+* Kubernetes Basics
+
+**Minikube**:
+Lightweight single-node Kubernetes cluster that has both control plane components and worker node components.
+
+In kubeadm, commonly deployed on VMs to simulate multi-node Kubernetes, but modern Minikube uses container-based drivers, reducing the need for dedicated VMs on local setups.
+
+* Basic Commands
+
+#+BEGIN_SRC bash
+# Get nodes
+kubectl get nodes
+
+# Create pod with nginx image
+kubectl run nginx --image=nginx
+
+# Delete pod
+kubectl delete pod my-pod
+#+END_SRC
+
+* Pod Definition
+
+**Repeatability** is key. Pod definition example:
+
+#+BEGIN_SRC yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+    - name: my-container
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+#+END_SRC
+
+* API Server
+
+Acts as front door for cluster:
+- Handles architecture
+- Admission control
+- Returns current state to clients
+
+* Pod Characteristics
+
+Pods are ephemeral objects which can't be paused. To stop a pod means we need to delete the pod.
+
+* ReplicaSet
+
+(Content to be expanded based on additional notes)
+
+

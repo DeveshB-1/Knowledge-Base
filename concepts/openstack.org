@@ -1,0 +1,64 @@
+#+TITLE: OpenStack Engineering
+#+ROAM_KEY: openstack-engineering
+#+ROAM_TAGS: OpenStack cloud virtualization
+#+DATE: 2025-10-19
+#+ID: 20251019-openstack-engineering
+
+* OpenStack Overview
+
+**Basic Abstraction**: OpenStack virtualizes bare metal resources and makes them accessible via API.
+
+**Key Principle**: Only orchestration is via API.
+
+**Backend Flow**: API → Nova component → libvirt → Hypervisor → Hardware
+
+* VM Lifecycle (High-Level Flow)
+
+#+BEGIN_SRC
+Client/API Call
+   ↓
+Nova API → Validates request
+   ↓
+Nova Conductor → Coordinates scheduling
+   ↓
+Nova Scheduler → Chooses best host
+   (based on resource availability, filters, and weights)
+   ↓
+Nova Compute (via RabbitMQ) → Executes provisioning instructions
+   ↓
+Image Fetched from Glance (Image Service)
+   ↓
+Networking Setup via Neutron (Virtual Networks)
+   ↓
+Block Storage via Cinder (Volumes attached to VM)
+#+END_SRC
+
+* Backend Infrastructure Flow
+
+#+BEGIN_SRC
+API Layer
+   ↓
+Nova Components
+   ↓
+libvirt (Abstraction Layer)
+   ↓
+Hypervisor (KVM/Xen/VMware/etc.)
+   ↓
+Physical Hardware
+#+END_SRC
+
+* OpenStack Components
+
+- **Nova**: Compute service
+- **Glance**: Image service (stores VM disk images)
+- **Neutron**: Networking service (creates virtual networks)
+- **Cinder**: Block storage (persistent volumes)
+- **RabbitMQ**: Messaging layer (for service communication)
+
+* One-Liner Summary
+
+OpenStack virtualizes bare metal using components like Nova via API.
+
+See also: [[../concepts/virtualization.org][Virtualization Concepts]], [[../concepts/kvm.org][KVM Concepts]]
+
+

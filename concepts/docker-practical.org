@@ -1,0 +1,45 @@
+#+TITLE: Docker Practical Implementation
+#+ROAM_KEY: docker-practical-implementation
+#+ROAM_TAGS: docker practical implementation
+#+DATE: 2025-10-19
+#+ID: 20251019-docker-practical-implementation
+
+* Setup Steps
+
+1. Docker engine installed
+2. Ran hello world
+3. =docker run ubuntu bash=
+
+* Dockerfile Understanding
+
+Dockerfile is a recipe for how the image is built:
+- Base image → Set directory → Install requirements
+
+* Docker Compose
+
+Similar to Kubernetes YAML file - it's a blueprint for the whole system.
+
+**Features**:
+- Running complex setups
+- Setting images
+- Setting health checks
+- Setting Redis volumes
+- Automatic environment injection
+
+* Docker Environment Benefits
+
+- **Isolate packages**: Prevents conflicts
+- **Runs with CUDA**: GPU support
+- **Environment consistency**: Same environment across different systems
+
+* Docker Image
+
+A Docker image is a layered snapshot of a minimal Linux filesystem, including:
+- Your app
+- Its dependencies
+- Configuration
+- Everything needed to run the app in isolation
+
+See also: [[../concepts/docker.org][Docker Concepts]]
+
+

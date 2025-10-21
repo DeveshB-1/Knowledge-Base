@@ -1,0 +1,23 @@
+#+TITLE: Why Lisp?
+#+ROAM_KEY: why-lisp
+#+ROAM_TAGS: lisp macros programming hacker
+#+DATE: 2024-01-19
+#+ID: 20240119-why-lisp
+
+I started reading "Beating the Average" book. It began with a startup owner who wanted to develop things fast. He started searching different programs and stumbled upon the book "How to Become a Hacker" by Eric Raymond.
+
+There he mentioned Lisp. He was curious about what Lisp was and explored it further.
+
+Lisp led to macros - that's where true Lisp starts.
+
+* What are Macros?
+
+From my understanding, macros are a structure of code (skeleton) based on which code is generated. Macros can be powerful tools for code generation.
+
+See also: [[../books/beat-the-average.org][Beat the Average]]
+
+* Key Concepts
+
+- **Homoiconicity**: Code as data and data as code
+- **Macros**: Generate code rather than just execute functions
+- **Syntax and Control Flow**: Lisp uses these to control abstract logic

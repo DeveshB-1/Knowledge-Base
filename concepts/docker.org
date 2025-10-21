@@ -1,0 +1,117 @@
+:PROPERTIES:
+:ID:       1229a397-5808-41c8-8fa8-c2b6ee407bda
+:END:
+#+TITLE: Docker Concepts
+#+ROAM_KEY: docker-concepts
+#+ROAM_TAGS: docker devops containerization
+#+DATE: 2024-01-19
+#+ID: 20240119-docker-concepts
+
+* Docker Fundamentals
+
+**Rootfs vs Live Image**:
+- Rootfs: Initializes a minimal OS
+- Live image: Has everything needed
+
+**Docker Architecture**:
+- Image is bigger but broken into layers
+- Only ship the layer which has changes
+
+**VPS (Virtual Private Server)**:
+Shares same kernel OS but applications are separated by containers
+
+**PaaS (Platform as a Service)**:
+Gives you ready-to-use platform to deploy your code
+
+* Docker Components
+
+- **Docker Swarm**: Multiple machines
+- **Docker Machine**: Host a VM in cloud
+- **Kitematic**: Automates installation of Docker
+
+* Basic Commands
+
+#+BEGIN_SRC bash
+docker run -d    # run detached
+docker ps        # show processes
+docker ps -l     # latest process
+docker ps -q     # quick (only container ID)
+docker ps -lq    # both latest and quick
+#+END_SRC
+
+* Key Definitions
+
+- **Image**: Read-only filesystem
+- **Container**: Encapsulated set of processes
+- **Image Creation**: Created by freezing a container
+- **Storage**: Stored in docker host or docker registry (not cloud)
+
+* Dockerfile Syntax
+
+**Instructions**:
+- =FROM=: Specify the base image
+- =RUN=: Make a new layer in the image, performs setup tasks
+- =COPY=: Copy files from host machine to container
+- =ADD=: Extract compressed files and fetch files from URLs (less used)
+- =WORKDIR=: Set working directory
+- =EXPOSE=: Expose port
+- =CMD=: End command line
+
+* Container Communication
+
+**Linux**: Docker containers can be accessed with their local IP
+**Mac**: Docker containers can be accessed after being forwarded to localhost port
+
+* Docker Networks
+
+**Default Bridge Network**:
+#+BEGIN_SRC bash
+docker run -itd --rm --name thor busybox
+#+END_SRC
+
+**User Defined Bridge**:
+#+BEGIN_SRC bash
+# Create network
+docker network create asgard
+
+# Create container attached to network
+docker run -itd --rm --network asgard --name loki busybox
+
+# Connect existing container to network
+docker network connect asgard loki
+
+# Disconnect from network
+docker network disconnect asgard loki
+#+END_SRC
+
+* Advanced Networking
+
+**Macvlan**:
+Gets its own MAC address on physical LAN. Useful when container needs to be treated like a real machine on the network.
+
+#+BEGIN_SRC bash
+docker network create -d macvlan \
+  --subnet=192.168.1.0/24 \
+  --gateway=192.168.1.1 \
+  -o parent=eth0 \
+  macnet
+
+docker run -dit --rm --name macvlan-test --network macnet busybox
+#+END_SRC
+
+**IPvlan**:
+- **L2**: Parent acts like a bridge or switch
+- **L3**: Same MAC address but different IP addresses
+
+* Useful Commands
+
+#+BEGIN_SRC bash
+# Find what's using a port
+sudo lsof -i :80
+
+# Kill process by PID
+sudo kill <PID>
+#+END_SRC
+
+
+See also: [[file:docker.org][Docker]] and [[file:helm-charts.org][Helm Charts]

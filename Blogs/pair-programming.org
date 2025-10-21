@@ -1,0 +1,44 @@
+#+TITLE: Pair Programming Notes
+#+ROAM_KEY: pair-programming-notes
+#+ROAM_TAGS: programming collaboration methodology
+#+DATE: 2025-10-19
+#+ID: 20251019-pair-programming-notes
+
+* LLM Context Limitations
+
+LLMs have limited context windows, so being more specific is necessary - going from vague ideas to more specific ones.
+
+**Why can't we have unlimited context limits?**
+- Hardware limitations
+- Attention scaling issues (O²)
+- Attention degrades over the length of prompts
+
+Latest models like GPT and Gemini have long memory, which raises the question: how different is long-term memory from context memory?
+
+LLMs pull or inject necessary data into the context window to help stay focused on the main prompt.
+
+* Meta Cognition
+
+Similar to how humans evaluate and adjust their thinking - giving direction to AI.
+
+Chain of thought is basically copying how humans break things into small pieces and cross-check outputs.
+
+* Best Practices for LLM Usage
+
+- One chat, one text, one specific thing
+- Be specific about issues
+- Add context or files in chats
+
+* Agentic AI
+
+Compared N8N with LangGraph:
+- N8N is workflow automation
+- LangGraph customizes the thinking process, directing AI on how to think based on output
+
+**Agent Definition**: Something that gets feedback from the environment and directs its actions based on that feedback.
+
+**Key Concepts**:
+- Prompt chaining: Sequencing prompts
+- Routing: Classifying based on output
+
+

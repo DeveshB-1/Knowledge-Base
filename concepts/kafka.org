@@ -1,0 +1,36 @@
+#+TITLE: Apache Kafka
+#+ROAM_KEY: apache-kafka
+#+ROAM_TAGS: kafka streaming data-pipeline messaging
+#+DATE: 2025-10-19
+#+ID: 20251019-apache-kafka
+
+* What is Kafka?
+
+Streamlined data pipeline for real-time data processing.
+
+**Core Components**:
+- **Producer API**: Records data → saved as immutable topics stored in cluster (brokers)
+- **Multiple Consumers**: Can subscribe to the data
+- **Stream API**: Powerful API that can transform topics in real-time
+
+* Kafka vs RabbitMQ
+
+**Kafka**:
+- Sent to services → streams data to services
+- Producer decides which queue data should go to
+- Enables Kafka to handle large amounts of data
+- Higher throughput compared to RabbitMQ
+
+**RabbitMQ**:
+- Consumer knows what kind of message they are consuming
+- More traditional message queuing approach
+
+* Key Benefits
+
+- High throughput
+- Real-time data transformation
+- Immutable data storage
+- Multiple consumer support
+- Scalable architecture
+
+

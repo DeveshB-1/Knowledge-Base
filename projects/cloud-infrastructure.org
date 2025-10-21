@@ -1,0 +1,44 @@
+#+TITLE: Cloud Infrastructure Project
+#+ROAM_KEY: cloud-infrastructure-project
+#+ROAM_TAGS: cloud infrastructure virtualization networking
+#+DATE: 2025-10-19
+#+ID: 20251019-cloud-infrastructure-project
+
+* Infrastructure Stack
+
+**Hardware Layer**:
+- Physical hardware foundation
+
+**Hypervisor Layer (Infrastructure)**:
+- VMware
+- KVM
+- Xen (mostly KVM)
+
+**Virtualization Layer**:
+- vCPU → Container → Kubernetes
+
+**Networking Layer**:
+- Virtual networks
+- **L2**: MAC addresses
+- **L3**: IP addresses
+
+* Architecture Flow
+
+#+BEGIN_SRC
+Hardware
+   ↓
+Hypervisor (VMware/KVM/Xen)
+   ↓
+vCPU → Container → kubectl
+   ↓
+Virtual Network (L2/L3)
+#+END_SRC
+
+* Key Components
+
+- Virtual CPU management
+- Container orchestration
+- Network virtualization
+- Infrastructure abstraction
+
+

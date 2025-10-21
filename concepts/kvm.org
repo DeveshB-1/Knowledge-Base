@@ -1,0 +1,65 @@
+#+TITLE: KVM (Kernel Virtual Machine)
+#+ROAM_KEY: kvm--kernel-virtual-machine
+#+ROAM_TAGS: KVM virtualization hypervisor
+#+DATE: 2025-10-19
+#+ID: 20251019-kvm-kernel-virtual-machine
+
+* KVM Overview
+
+KVM supports live migration - VM transferred between hosts with minimal pause time.
+
+**Live Migration Process**:
+- RAM pages are copied (dirty pages are bitmaped)
+- Copied until copying speed exceeds dirty page generation
+- Similarly for storage
+- At last, VM is frozen for few milliseconds so remaining dirty RAM is copied and CPU state is copied
+- VM resumes
+
+* KVM Components
+
+**QEMU**:
+- Full System Emulator
+- Guest OS kernel
+- Talks to KVM for CPU
+- Makes vCPU (maps thread to physical CPU/core)
+
+**Libvirt**:
+- Acts as manager for QEMU
+- Translates commands into QEMU CLI
+
+**Virsh/Virt-manager**:
+- =virsh=: CLI interface
+- =virt-manager=: GUI interface
+
+* KVM Workflow
+
+#+BEGIN_SRC
+libvirt reads my-vm.xml
+     ↓
+libvirt calls QEMU with proper CLI
+     ↓
+QEMU creates process
+     ↓
+QEMU calls into KVM via /dev/kvm
+     ↓
+KVM sets up guest vCPUs and memory maps
+     (because of Intel VT-x and AMD-V hardware changes)
+     ↓
+QEMU emulates BIOS/UEFI + boots guest OS
+     ↓
+Guest OS runs with accelerated CPU access via KVM
+#+END_SRC
+
+* OpenStack Integration
+
+**Nova Integration**:
+=nova api → Scheduler → nova conductor → nova compute=
+
+Process:
+- Reads XML configuration
+- Disk image setup
+- VM boots using QEMU
+
+See also: [[../concepts/virtualization.org][Virtualization Concepts]], [[../concepts/openstack.org][OpenStack Engineering]]
+
+

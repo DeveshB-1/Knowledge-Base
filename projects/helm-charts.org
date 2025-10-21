@@ -1,0 +1,37 @@
+#+TITLE: Helm Charts Project
+#+ROAM_KEY: helm-charts-project
+#+ROAM_TAGS: helm kubernetes package-management
+#+DATE: 2025-10-19
+#+ID: 20251019-helm-charts-project
+
+* What is Helm?
+
+Helm is like a package manager for Kubernetes applications.
+
+**Core Functions**:
+1. Install controller
+2. Update applications
+3. Uninstall applications
+4. Bundle helm charts with multiple components
+
+* Why Use Helm?
+
+**Alternative Approaches**:
+- Install ArgoCD using =kubectl apply=
+- Install nginx using =kubectl create deployment=
+
+**Helm Benefits**:
+- Simplified application management
+- Version control for deployments
+- Easy rollback capabilities
+- Template-based configuration
+- Dependency management
+
+* Common Use Cases
+
+- Complex application deployments
+- Multi-component applications
+- Environment-specific configurations
+- Application lifecycle management
+
+

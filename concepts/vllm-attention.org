@@ -1,0 +1,22 @@
+#+TITLE: vLLM Attention Mechanism
+#+ROAM_KEY: vllm-attention-mechanism
+#+ROAM_TAGS: vllm attention memory-management
+#+DATE: 2025-10-19
+#+ID: 20251019-vllm-attention-mechanism
+
+* Page Attention
+
+vLLM uses page attention to retrieve Key-Value (KV) cache efficiently.
+
+**What is Page Attention?**
+Page attention is a memory management and attention mechanism used in vLLM that organizes KV cache. Every new token generated is stored in a new slot with the context of previous tokens and pages. If it's a new page, each page has a limit of 16 or 256 slots per page.
+
+* Key Benefits
+
+- Efficient memory management
+- Better attention scaling
+- Optimized KV cache organization
+
+See also: [[../concepts/virtualization.org][Virtualization Concepts]]
+
+

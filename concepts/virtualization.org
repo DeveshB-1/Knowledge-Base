@@ -1,0 +1,53 @@
+#+TITLE: Virtualization Concepts
+#+ROAM_KEY: virtualization-concepts
+#+ROAM_TAGS: virtualization devops kubernetes docker
+#+DATE: 2025-10-19
+#+ID: 20251019-virtualization-concepts
+
+* Why N8N and DevOps?
+
+- **N8N**: Trigger automation (like getting logs and sending to Google Sheets)
+- **DevOps**: Automate infrastructure - managing VMs, monitoring and logging, auto-scaling
+
+* Types of Virtualization
+
+**Type 1**: Bare metal hypervisor
+**Type 2**: Runs inside OS (like VirtualBox)
+
+**KVM**: Kernel-level virtual machine that uses Linux-based kernel
+
+* Docker and Namespaces
+
+**Namespace**: Kernel-level function that sets boundaries and provides global resources, separating host cleanly from containers.
+
+**Question**: How do you control 1000+ containers? Kubernetes enters the chat.
+
+Kubernetes is an orchestration tool. In French, it also means "steering wheel of a ship."
+
+* Kubernetes Architecture
+
+**kube API**: Front desk that talks to everyone
+**etcd**: Brain that stores state (config, alive/bad status)
+**kube scheduler**: Based on resources, allocates new nodes. If user wants 3 replicas but only 2 are alive, it automatically creates a new pod with new IP (CNI assigns from pool). Why pool? To prevent IP repetition.
+
+**Important**: Must isolate CIDR for each cluster to prevent IP conflicts.
+
+* Types of Virtualization
+
+**1. Compute Level Virtualization**
+- Hypervisors translate VM requests to hardware
+- Physical server → Multiple isolated VMs
+
+**2. Storage Virtualization**
+- Software layer abstraction
+
+**3. Network Virtualization**
+- VLAN implementation
+
+**4. Desktop Virtualization**
+
+**5. Application Virtualization**
+
+See also: [[../concepts/kvm.org][KVM Concepts]], [[../concepts/openstack.org][OpenStack Engineering]], [[../concepts/docker-practical.org][Docker Practical]]
+
+

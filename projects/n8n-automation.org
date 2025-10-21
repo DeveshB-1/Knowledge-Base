@@ -1,0 +1,36 @@
+#+TITLE: N8N Workflow Automation
+#+ROAM_KEY: n8n-workflow-automation
+#+ROAM_TAGS: n8n automation workflow
+#+DATE: 2025-10-19
+#+ID: 20251019-n8n-workflow-automation
+
+* N8N Overview
+
+N8N is a workflow automation platform with node-based architecture.
+
+* Core Components
+
+**Triggers**:
+- Event-driven workflow initiation
+- Various trigger types available
+
+**Nodes**:
+- Building blocks of workflows
+- Each node performs specific functions
+
+* Use Cases
+
+- Data pipeline automation
+- API integrations
+- Business process automation
+- System monitoring and alerting
+
+* Benefits
+
+- Visual workflow design
+- Extensive node library
+- Self-hosted option
+- Open-source platform
+
+
+[[id:ea19ac5c-4dd0-4928-ac20-63844a806b9a][kubernetics]] 

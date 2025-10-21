@@ -1,0 +1,40 @@
+#+TITLE: Beat the Average
+#+ROAM_KEY: beat-the-average
+#+ROAM_TAGS: programming lisp hacker macros
+#+DATE: 2025-10-19
+#+ID: 20251019-beat-the-average
+
+* Core Philosophy
+
+Programming language dictates how people think about problems in programming. In that way, Lisp is a great thing to start learning about.
+
+People dismiss the idea of powerful programming languages because they never used one like Lisp.
+
+* Power is Abstraction
+
+**Homoiconicity** = Code as data and data as code
+Because Lisp is list and list is Lisp (prefix notation)
+
+Most programming languages use abstract logic using functions, but Lisp uses syntax and control flow to control abstraction.
+
+- **Function**: Give me answer, I execute
+- **Macros**: It generates code
+
+* How to Become a Hacker (Eric Raymond)
+
+- The world is full of fascinating problems
+- No problem should ever be solved twice - sharing is key
+- Boredom is the evil drug
+- Freedom is good
+
+* Lisp Philosophy
+
+Most programming languages teach you how to code, but Lisp teaches you how programming works.
+
+In Lisp, no parser is needed.
+
+Why is Lisp related to hackers? Most of the time we can't touch the compiler (restricted), code is opaque.
+
+See also: [[../blogs/why-lisp.org][Why Lisp?]]
+
+

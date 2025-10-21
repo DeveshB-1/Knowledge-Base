@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Knowledge Base Graph</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #51afef;
+            margin-bottom: 30px;
+        }
+        .stats {
+            background: #2a2e38;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .category {
+            background: #2a2e38;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #51afef;
+        }
+        .category h2 {
+            color: #51afef;
+            margin-top: 0;
+        }
+        .node {
+            background: #3a3f4a;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+            border-left: 3px solid #7bc275;
+        }
+        .node-title {
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .node-file {
+            font-size: 0.9em;
+            color: #9ca0a4;
+            margin-top: 4px;
+        }
+        .tags {
+            margin-top: 8px;
+        }
+        .tag {
+            display: inline-block;
+            background: #51afef;
+            color: #1a1a1a;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Knowledge Base Graph</h1>
+        
+        <div class="stats">
+            <h2>📊 Statistics</h2>
+            <p><strong>18</strong> nodes in your knowledge base</p>
+            <p><strong>57</strong> tags across all nodes</p>
+        </div>
+        
+        <div class="categories">
+
+            <div class="category">
+                <h2>📁 Blogs</h2>
+
+                <div class="node">
+                    <div class="node-title">Pair Programming Notes</div>
+                    <div class="node-file">pair-programming.org</div>
+                    <div class="tags"><span class="tag">programming</span><span class="tag">collaboration</span><span class="tag">methodology</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Why Lisp?</div>
+                    <div class="node-file">why-lisp.org</div>
+                    <div class="tags"><span class="tag">lisp</span><span class="tag">macros</span><span class="tag">programming</span><span class="tag">hacker</span></div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>📁 Books</h2>
+
+                <div class="node">
+                    <div class="node-title">Beat the Average</div>
+                    <div class="node-file">beat-the-average.org</div>
+                    <div class="tags"><span class="tag">programming</span><span class="tag">lisp</span><span class="tag">hacker</span><span class="tag">macros</span></div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>📁 Concepts</h2>
+
+                <div class="node">
+                    <div class="node-title">CNCF (Cloud Native Computing Foundation)</div>
+                    <div class="node-file">cncf.org</div>
+                    <div class="tags"><span class="tag">CNCF</span><span class="tag">cloud-native</span><span class="tag">kubernetes</span><span class="tag">containers</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Kubernetes Concepts</div>
+                    <div class="node-file">kubernetes.org</div>
+                    <div class="tags"><span class="tag">kubernetes</span><span class="tag">devops</span><span class="tag">orchestration</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Docker Concepts</div>
+                    <div class="node-file">docker.org</div>
+                    <div class="tags"><span class="tag">docker</span><span class="tag">devops</span><span class="tag">containerization</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">OpenStack Engineering</div>
+                    <div class="node-file">openstack.org</div>
+                    <div class="tags"><span class="tag">OpenStack</span><span class="tag">cloud</span><span class="tag">virtualization</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">vLLM Attention Mechanism</div>
+                    <div class="node-file">vllm-attention.org</div>
+                    <div class="tags"><span class="tag">vllm</span><span class="tag">attention</span><span class="tag">memory-management</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">LangChain Concepts</div>
+                    <div class="node-file">langchain.org</div>
+                    <div class="tags"><span class="tag">langchain</span><span class="tag">ai</span><span class="tag">prompt-engineering</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">KVM (Kernel Virtual Machine)</div>
+                    <div class="node-file">kvm.org</div>
+                    <div class="tags"><span class="tag">KVM</span><span class="tag">virtualization</span><span class="tag">hypervisor</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Docker Practical Implementation</div>
+                    <div class="node-file">docker-practical.org</div>
+                    <div class="tags"><span class="tag">docker</span><span class="tag">practical</span><span class="tag">implementation</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Virtualization Concepts</div>
+                    <div class="node-file">virtualization.org</div>
+                    <div class="tags"><span class="tag">virtualization</span><span class="tag">devops</span><span class="tag">kubernetes</span><span class="tag">docker</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Data Engineering Concepts</div>
+                    <div class="node-file">data-engineering.org</div>
+                    <div class="tags"><span class="tag">data-engineering</span><span class="tag">data-pipeline</span><span class="tag">structured-data</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Apache Kafka</div>
+                    <div class="node-file">kafka.org</div>
+                    <div class="tags"><span class="tag">kafka</span><span class="tag">streaming</span><span class="tag">data-pipeline</span><span class="tag">messaging</span></div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>📁 Projects</h2>
+
+                <div class="node">
+                    <div class="node-title">N8N Workflow Automation</div>
+                    <div class="node-file">n8n-automation.org</div>
+                    <div class="tags"><span class="tag">n8n</span><span class="tag">automation</span><span class="tag">workflow</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Helm Charts Project</div>
+                    <div class="node-file">helm-charts.org</div>
+                    <div class="tags"><span class="tag">helm</span><span class="tag">kubernetes</span><span class="tag">package-management</span></div>
+                </div>
+
+                <div class="node">
+                    <div class="node-title">Cloud Infrastructure Project</div>
+                    <div class="node-file">cloud-infrastructure.org</div>
+                    <div class="tags"><span class="tag">cloud</span><span class="tag">infrastructure</span><span class="tag">virtualization</span><span class="tag">networking</span></div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h2>📁 Other</h2>
+
+                <div class="node">
+                    <div class="node-title">Knowledge Base Index</div>
+                    <div class="node-file">index.org</div>
+                    <div class="tags"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+#+TITLE: CNCF (Cloud Native Computing Foundation)
+#+ROAM_KEY: cncf--cloud-native-computing-foundation
+#+ROAM_TAGS: CNCF cloud-native kubernetes containers
+#+DATE: 2025-10-19
+#+ID: 20251019-cncf-cloud-native-computing-foundation
+
+* CNCF Architecture
+
+**4-Layer Model**:
+
+**1. Provisioning Layer**
+- Automation, Infrastructure as Code (IaC)
+- Keywords: Automation, IaC
+- Kagent integration
+
+**Container Basics**:
+- **Container**: Running an image and providing resources to it
+- **Image**: Set of archived files needed to run in container
+
+**2. Runtime Layer**
+- Container runtime management
+
+**3. Orchestration and Management**
+- Kubernetes and orchestration tools
+
+**4. Application and Definition**
+- Application layer management
+
+* 2 Pillars
+
+**1. Observability and Analysis**
+- Monitoring and logging
+
+**2. Platforms**
+- Platform services and management
+
+* Key Concepts
+
+- Cloud-native architecture
+- Container orchestration
+- Microservices architecture
+- DevOps practices
+
+

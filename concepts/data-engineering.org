@@ -1,0 +1,51 @@
+#+TITLE: Data Engineering Concepts
+#+ROAM_KEY: data-engineering-concepts
+#+ROAM_TAGS: data-engineering data-pipeline structured-data
+#+DATE: 2025-10-19
+#+ID: 20251019-data-engineering-concepts
+
+* Data Types
+
+- **Structured Data**: Organized, tabular format
+- **Unstructured Data**: Raw, non-tabular format
+
+* Why Data Engineering?
+
+Data engineers handle the complete data lifecycle and infrastructure.
+
+* Data Engineer Lifecycle
+
+**1. Generation**
+- Data creation and collection
+
+**2. Traditional Stage and IoT**
+- Traditional data processing
+- Internet of Things data handling
+
+**3. Callback and Hook**
+- Event-driven data processing
+
+* Key Technologies
+
+**FastAI (Jeremy Howard)**:
+- Machine learning framework
+
+**BLOB (Binary Large Object)**:
+- Storage for large binary data
+
+* Docker in Data Engineering
+
+"It works on my computer" → Docker solves this problem
+
+**Docker Architecture**:
+- Docker client (for instructions) → Docker daemon/host
+- Example: =docker run -t nginx latest=
+
+* Data Pipeline Concepts
+
+- Data ingestion
+- Data transformation
+- Data storage
+- Data serving
+
+
