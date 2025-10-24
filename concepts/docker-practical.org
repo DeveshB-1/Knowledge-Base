@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       09c8cae1-8ab2-4492-9345-683aba101302
+:END:
 #+TITLE: Docker Practical Implementation
 #+ROAM_KEY: docker-practical-implementation
 #+ROAM_TAGS: docker practical implementation

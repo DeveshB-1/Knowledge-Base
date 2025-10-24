@@ -15,7 +15,7 @@ Streamlined data pipeline for real-time data processing.
 
 * Kafka vs RabbitMQ
 
-**Kafka**:
+**KAFKA**:
 - Sent to services → streams data to services
 - Producer decides which queue data should go to
 - Enables Kafka to handle large amounts of data
